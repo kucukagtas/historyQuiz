@@ -187,48 +187,24 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Start Card */
-.start-card {
-  padding: 40px 24px !important;
+/* Start Button Box */
+#button-box {
+  text-align: center;
+  padding: 20px 0;
 }
 
-.start-icon-wrap {
-  width: 76px;
-  height: 76px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: var(--accent-light);
-  color: var(--accent-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
-  box-shadow: 0 8px 24px var(--accent-glow);
-}
-
-.start-card h3 {
-  color: var(--text-primary);
-}
-
-.start-desc {
-  color: var(--text-secondary);
-  font-size: 0.98rem;
-  line-height: 1.6;
-}
-
-.btn-start {
-  background: var(--accent-primary) !important;
-  border-color: var(--accent-primary) !important;
-  color: #ffffff !important;
-  border-radius: 12px;
+#button-box .btn-start {
+  padding: 12px 36px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(255, 193, 7, 0.35);
   transition: all 0.2s ease;
 }
 
-.btn-start:hover {
-  background: var(--accent-hover) !important;
-  border-color: var(--accent-hover) !important;
+#button-box .btn-start:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px var(--accent-glow);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
 }
 
 /* ==========================================================================
@@ -544,16 +520,6 @@ body {
     width: 38px;
     height: 38px;
     font-size: 1rem;
-  }
-
-  .start-card {
-    padding: 28px 16px !important;
-  }
-
-  .start-icon-wrap {
-    width: 64px;
-    height: 64px;
-    font-size: 1.8rem;
   }
 
   #quiz-box #header {
