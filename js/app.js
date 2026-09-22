@@ -41,7 +41,7 @@ let currentRemainingTime = 10;
 
 
 
-// Fisher-Yates Karıştırma Algoritması
+// Soru Karıştırma
 function shuffleArray(arr) {
   const array = [...arr];
   for (let i = array.length - 1; i > 0; i--) {
@@ -130,7 +130,7 @@ function optionSelected(e) {
 
   if (soru.cevabiKontrolEt(cevap)) {
     quiz.dogruCevapSayisi += 1;
-    // Puan: 100 Taban Puan + Kalan Saniye x 10 Hız Bonusu
+    // Puan
     const kazanilanPuan = 100 + (Math.max(0, currentRemainingTime) * 10);
     quiz.toplamPuan += kazanilanPuan;
     ui.puanGuncelle(quiz.toplamPuan);
@@ -204,18 +204,14 @@ ui.btnQuit.addEventListener("click", function () {
   window.location.reload();
 });
 
-// ==========================================================================
-// Dark / Light Mode Theme Management
-// ==========================================================================
+// Tema
 const themeToggleBtn = document.querySelector("#theme-toggle");
 
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   try {
     localStorage.setItem("quiz_theme", theme);
-  } catch (e) {
-    // localStorage might be unavailable in restricted environments
-  }
+  } catch (e) {}
 
   if (themeToggleBtn) {
     const icon = themeToggleBtn.querySelector("i");
@@ -229,7 +225,6 @@ function applyTheme(theme) {
   }
 }
 
-// Initial theme detection: LocalStorage > System Preference
 let savedTheme = null;
 try {
   savedTheme = localStorage.getItem("quiz_theme");
