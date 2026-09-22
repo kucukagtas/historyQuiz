@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>historyQuiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Dark/Light Mode">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+
+    <div class="app-container">
+      <div id="button-box" class="active card card-body text-center start-card shadow-lg">
+        <div class="start-icon-wrap mb-3">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+        <h3 class="fw-bold mb-2">History Quiz</h3>
+        <p class="start-desc mb-4">
+          Test your knowledge on the foundational milestones, diplomatic catalysts, and key conventions of modern Turkish history.
+        </p>
+        <button class="btn btn-lg btn-primary btn-start fw-semibold py-2 px-4">
+          Start Quiz <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+      </div>
+      <div id="quiz-box" class="card">
+        <div id="header" class="card-header">
+          <h4 class="app-title mb-0">History Quiz</h4>
+          <div class="time">
+            <div class="time-text">Time Left</div>
+            <div class="time-second">10</div>
+          </div>
+          <div class="time-line"></div>
+        </div>
+        <div class="step-indicators d-flex justify-content-center gap-2 py-2 bg-light border-bottom"></div>
+        <div id="body"></div>
+        <div id="footer" class="card-footer summary">
+          <div class="d-flex align-items-center gap-2">
+            <div class="question-index"></div>
+            <div class="live-score badge text-bg-warning">0 Points</div>
+          </div>
+          <button class="btn btn-next btn-secondary btn-sm">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div id="score-box" class="card card-body">
+        <i class="bi bi-trophy"></i>
+        <div class="score-badge my-2"></div>
+        <div class="score-points fs-3 fw-bold text-success mb-2"></div>
+        <div class="score-text text-muted mb-3"></div>
+        <div class="d-flex justify-content-center gap-2">
+          <button class="btn btn-primary btn-replay">Replay</button>
+          <button class="btn btn-outline-secondary btn-quit">Quit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/soru.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
